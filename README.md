@@ -1,6 +1,6 @@
 # PeterDB
 
-This is the implementation of a relational database, also the project codebase for the class *Principles of Data Management*.
+This is an implementation of a relational database.
 
 ### Components
 
@@ -12,14 +12,12 @@ This is the implementation of a relational database, also the project codebase f
 
 ### Build
 
-- `mkdir -p cmake-build-debug && cd cmake-build-debug`
-- `cmake ../ && cmake --build .`
+    rm -rf cmake-build-debug    # clear previous builds if exists
+    mkdir -p cmake-build-debug  # create a sub-directory
+    cd cmake-build-debug && cmake ../ && cmake --build .    # build with cmake
 
 ### Test
 
-- `cd cmake-build-debug`
-- `ctest .` or specify a test case, like `ctest . -R PFM_File_Test.create_file`
-
-### Clean
-
-- `rm -rf cmake-build-debug`
+    cd cmake-build-debug
+    ctest . # test all components
+    ctest . -R PFM_File_Test.create_file    # test a specific function
